@@ -5,18 +5,76 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-	<title>Captain Barbozza – Eat like a Captain, Drink like a Pirate</title>
+	<title>Oldstory – Whiskey Bar HTML</title>
 	<link rel="stylesheet" type="text/css" media="all" href="js/vendor/essential-grid/public/assets/css/settings.css">
 	<link rel="stylesheet" type="text/css" media="all" href="js/vendor/essential-grid/public/assets/css/lightbox.css">
+	<link rel="stylesheet" type="text/css" media="all" href="js/vendor/revslider/public/assets/css/settings.css">	
 	<link rel="stylesheet" type="text/css" media="all" href="css/fontello/css/fontello.min.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/core.animation.min.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/theme.shortcodes.css" />	
 	<link rel="stylesheet" type="text/css" media="all" href="css/skin.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/fonts.css">
-	<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/responsive.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap/bootstrap.css">
+	
+	<style>
+		h1 { font-family: "Constantine"; }
+		h1, h2, h4, h5, h6 { text-transform: capitalize; }
+		
+		.heading { text-transform: lowercase; }
+		.heading span { text-transform: capitalize; }
+		
+		.hidden { display: none; }
+		
+		a:hover { text-decoration: none; }
+				
+		header { transition: 0.3s all ease; top: 0; position: fixed !important; background-color: rgba(37, 37, 37, 0); }
+		header .logo { margin-top: 10px !important; position: relative; max-width: 240px; }
+		header .logo .icon,
+		header .logo .text { transition: 0.3s all ease; }
+		header .icon { max-height: 100%; }
+		header .text { opacity: 0; position: absolute; top: 0; left: 0; transform: scale(0.0); }
+		header .top_panel_middle { transition: 0.3s all ease; }
+		
+		.top_panel_style_8 .top_panel_middle .contact_info { padding-left: 0; }
+		.top_panel_style_8 .top_panel_middle .contact_info li { padding-left: 20px; }
+		.top_panel_style_8 .top_panel_middle .contact_address:before { left: 0; }
+		
+		header.onscroll { background-color: rgba(37, 37, 37, 1); box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4); z-index: 20 !important; }
+		header.onscroll .top_panel_middle { padding: 0 !important; }
+		header.onscroll .logo { margin-top: 40px !important; }
+		header.onscroll .icon { opacity: 0; transform: scale(0.0); }
+		header.onscroll .text { opacity: 1; transform: scale(1.0); }
+		
+		/* Main Fold */
+		.main-fold { height: 100vh; }
+		.main-fold h1 { text-transform: capitalize; }
+
+		/* Carousel */
+		.carousel-item { background-color: #000000; height: 100vh; }
+		.carousel-item { background-size: cover; background-position: center; background-repeat: no-repeat; }
+		.carousel-inner:before { position: absolute; content: ""; height: calc(100% - 80px); width: calc(100% - 80px); }
+		.carousel-inner:before { border: 5px solid #FFFFFF; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; }
+		.carousel-caption { right: auto; paddin: 30px; color: #FFFFFF; max-width: 6400px; }
+		.carousel-caption { left: 50%; top: 50%; bottom: auto; transform: translate(-50%, -25%); }
+		.carousel-caption h1 { color: #FFFFFF; font-size: 56px; margin-bottom: 0; } 
+		.carousel-caption h5 { color: #FFFFFF; line-height: 32px; } 
+		.carousel-control,
+		.carousel-indicators { display: none; }
+		
+		.carousel-fade .carousel-item { opacity: 0; transition-duration: .6s; transition-property: opacity; z-index: 10; }
+		.carousel-fade .carousel-item.active,
+		.carousel-fade .carousel-item-next.carousel-item-left,
+		.carousel-fade .carousel-item-prev.carousel-item-right { opacity: 1; }
+		.carousel-fade .active.carousel-item-left,
+		.carousel-fade .active.carousel-item-right { opacity: 0; }
+		.carousel-fade .carousel-item-next,
+		.carousel-fade .carousel-item-prev,
+		.carousel-fade .carousel-item.active,
+		.carousel-fade .active.carousel-item-left,
+		.carousel-fade .active.carousel-item-prev { transform: translateX(0); transform: translate3d(0, 0, 0); }
+	</style>
 </head>
 
 <body class="home page body_filled article_style_stretch scheme_original top_panel_over sidebar_hide">
@@ -40,7 +98,7 @@
 							<div class="contact_info">
 								<ul>
 									<li class="contact_address icon-location">Angeles City, Pampanga</li>
-									<li class="contact_address icon-phone">(+63)0917-987-6543</li>
+									<li class="contact_address icon-location">Angeles City, Pampanga</li>
 								</ul>
 							</div>
 							<!-- /.contact_info -->
@@ -78,14 +136,75 @@
 				<div class="pushy_inner">
 					<a href="#" class="close-pushy"></a>
 					
+					<!-- .logo -->
+					<div class="logo">
+						<a href="index.html"><img src="images/logo.png" class="logo_side" alt="" width="132" height="54"></a>
+					</div>
+					<!-- /.logo -->
+					
 					<!-- .menu_pushy_nav -->
 					<ul id="menu_pushy" class="menu_pushy_nav">
-						<li class="menu-item"><a href="index.html">Home</a></li>
-						<li class="menu-item"><a href="about-us.html">About Us</a></li>
-						<li class="menu-item"><a href="our-menu.html">Our Menu</a></li>
-						<li class="menu-item"><a href="promo.html">Promo</a></li>
-						<li class="menu-item"><a href="latest-events.html">Latest Events</a></li>
-						<li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
+						<li class="menu-item current-menu-ancestor menu-item-has-children">
+							<a href="#">Home</a>
+							<ul class="sub-menu">
+								<li class="menu-item menu-item-object-page current-menu-item"><a href="index.html">Home 1</a></li>
+								<li class="menu-item menu-item-object-page "><a href="index2.html">Home 2</a></li>
+							</ul>
+						</li>
+						<li class="menu-item  menu-item-has-children">
+							<a href="#">Features</a>
+							<ul class="sub-menu">
+								<li class="menu-item menu-item-object-page "><a href="features-typography.html">Typography</a></li>
+								<li class="menu-item menu-item-object-page "><a href="features-shortcodes.html">Shortcodes</a></li>
+								<li class="menu-item "><a href="features-page404.html">Page 404</a></li>
+								<li class="menu-item  menu-item-has-children">
+									<a href="#">Gallery</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-object-page "><a href="features-gallery-masonry.html">Masonry</a></li>
+										<li class="menu-item menu-item-object-page "><a href="features-gallery-grid.html">Grid</a></li>
+										<li class="menu-item menu-item-object-page "><a href="features-gallery-cobbles.html">Cobbles</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children ">
+							<a href="#">About us</a>
+							<ul class="sub-menu">
+								<li class="menu-item menu-item-object-page "><a href="about-us-about-us.html">About us</a></li>
+								<li class="menu-item "><a href="about-us-bartender.html">Bartender&#8217;s Page</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-has-children ">
+							<a href="#">News</a>
+							<ul class="sub-menu">
+								<li class="menu-item "><a href="news-post-formats.html">Post Formats</a></li>
+								<li class="menu-item "><a href="news-classic.html">Classic Style</a></li>
+								<li class="menu-item menu-item-has-children ">
+									<a href="#">Masonry Layout</a>
+									<ul class="sub-menu">
+										<li class="menu-item "><a href="news-masonry-layout-2-columns.html">Masonry (2 columns)</a></li>
+										<li class="menu-item "><a href="news-masonry-layout-3-columns.html">Masonry (3 columns)</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children ">
+									<a href="#">Portfolio Layout</a>
+									<ul class="sub-menu">
+										<li class="menu-item "><a href="news-portfolio-layout-2-columns.html">Portfolio (2 columns)</a></li>
+										<li class="menu-item "><a href="news-portfolio-layout-3-columns.html">Portfolio (3 columns)</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-object-page "><a href="menu.html">Menu</a></li>
+						<li class="menu-item menu-item-has-children ">
+							<a href="#">Store</a>
+							<ul class="sub-menu">
+								<li class="menu-item menu-item-object-page "><a href="store-shop.html">Shop</a></li>
+								<li class="menu-item menu-item-object-page "><a href="store-cart.html">Cart</a></li>
+								<li class="menu-item menu-item-object-page "><a href="store-checkout.html">Checkout</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item-object-page "><a href="contacts.html">Contacts</a></li>
 					</ul>
 					<!-- /.menu_pushy_nav -->
 				</div>
@@ -107,7 +226,7 @@
 					
 					<!-- .logo -->
 					<div class="logo">
-						<a href="index.html"><img src="images/text-captain-barbozza.png" class="text" alt="" /></a>
+						<a href="index.html"><img src="images/logo.png" class="logo_main" alt="" width="132" height="54"></a>
 					</div>
 					<!-- /.logo -->
 				</div>
@@ -125,12 +244,67 @@
 						<nav class="menu_main_nav_area">
 							<!-- .menu_main_nav -->
 							<ul id="menu_main" class="menu_main_nav">
-								<li class="menu-item"><a href="index.html">Home</a></li>
-								<li class="menu-item"><a href="about-us.html">About Us</a></li>
-								<li class="menu-item"><a href="our-menu.html">Our Menu</a></li>
-								<li class="menu-item"><a href="promo.html">Promo</a></li>
-								<li class="menu-item"><a href="latest-events.html">Latest Events</a></li>
-								<li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
+								<li class="menu-item current-menu-ancestor menu-item-has-children">
+									<a href="#">Home</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-object-page current-menu-item"><a href="index.html">Home 1</a></li>
+										<li class="menu-item menu-item-object-page "><a href="index2.html">Home 2</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children ">
+									<a href="#">Features</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-object-page "><a href="features-typography.html">Typography</a></li>
+										<li class="menu-item menu-item-object-page "><a href="features-shortcodes.html">Shortcodes</a></li>
+										<li class="menu-item "><a href="features-page404.html">Page 404</a></li>
+										<li class="menu-item menu-item-has-children ">
+											<a href="#">Gallery</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-object-page "><a href="features-gallery-masonry.html">Masonry</a></li>
+												<li class="menu-item menu-item-object-page "><a href="features-gallery-grid.html">Grid</a></li>
+												<li class="menu-item menu-item-object-page "><a href="features-gallery-cobbles.html">Cobbles</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children ">
+									<a href="#">About us</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-object-page "><a href="about-us-about-us.html">About us</a></li>
+										<li class="menu-item "><a href="about-us-bartender.html">Bartender&#8217;s Page</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-has-children ">
+									<a href="#">News</a>
+									<ul class="sub-menu">
+										<li class="menu-item "><a href="news-post-formats.html">Post Formats</a></li>
+										<li class="menu-item "><a href="news-classic.html">Classic Style</a></li>
+										<li class="menu-item menu-item-has-children ">
+											<a href="#">Masonry Layout</a>
+											<ul class="sub-menu">
+												<li class="menu-item "><a href="news-masonry-layout-2-columns.html">Masonry (2 columns)</a></li>
+												<li class="menu-item "><a href="news-masonry-layout-3-columns.html">Masonry (3 columns)</a></li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-has-children ">
+											<a href="#">Portfolio Layout</a>
+											<ul class="sub-menu">
+												<li class="menu-item "><a href="news-portfolio-layout-2-columns.html">Portfolio (2 columns)</a></li>
+												<li class="menu-item "><a href="news-portfolio-layout-3-columns.html">Portfolio (3 columns)</a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-object-page "><a href="menu.html">Menu</a></li>
+								<li class="menu-item menu-item-has-children ">
+									<a href="#">Store</a>
+									<ul class="sub-menu">
+										<li class="menu-item menu-item-object-page "><a href="store-shop.html">Shop</a></li>
+										<li class="menu-item menu-item-object-page "><a href="store-cart.html">Cart</a></li>
+										<li class="menu-item menu-item-object-page "><a href="store-checkout.html">Checkout</a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-object-page "><a href="contacts.html">Contacts</a></li>
 							</ul>
 							<!-- /.menu_main_nav -->
 						</nav>
@@ -155,7 +329,7 @@
 				<!-- -->
 				<div class="container-fluid">
 					<!-- -->
-					<div class="row justify-content-center align-content-center">
+					<div class="row">
 						<!-- -->
 						<div class="col-md-8">
 							<h1 class="heading">Captain Barbozza</h1>
@@ -169,6 +343,56 @@
 				<!-- / -->
 			</div>
 			<!-- / -->
+			
+			<!-- .carousel -->
+			<div id="main_slider" class="carousel carousel-fade slide hidden" data-ride="carousel">
+				<!-- .carousel-indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#main_slider" data-slide-to="0" class="active"></li>
+					<li data-target="#main_slider" data-slide-to="1"></li>
+				</ol>
+				<!-- /.carousel-indicators -->
+
+				<!-- .carousel-inner -->
+				<div class="carousel-inner">
+					<!-- .carousel-item -->
+					<div class="carousel-item active" style="background-image: url(images/slide-1.jpg);">
+						<!-- .carousel-caption -->
+						<div class="carousel-caption">
+							<h1 class="heading">Captain Barbozza</h1>
+							<h5>Eat like a Captain, Drink like a Pirate</h5>
+							<a href="#" class="sc_button sc_button_style_filled margin_top_medium">Find Out More</a>
+						</div>
+						<!-- /.carousel-caption -->
+					</div>
+					<!-- /.carousel-item -->
+
+					<!-- .carousel-item -->
+					<div class="carousel-item" style="background-image: url(images/slide-2.jpg);">
+						<!-- .carousel-caption -->
+						<div class="carousel-caption">
+							<h1 class="heading">Captain Barbozza</h1>
+							<h5>Eat like a Captain, Drink like a Pirate</h5>
+							<a href="#" class="sc_button sc_button_style_filled margin_top_medium">Find Out More</a>
+						</div>
+						<!-- /.carousel-caption -->
+					</div>
+					<!-- /.carousel-item -->
+				</div>
+				<!-- /.carousel-inner -->
+
+				<!-- .carousel-control -->
+				<a class="carousel-control carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control carousel-control-next" href="#main_slider" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+				<!-- /.carousel-control -->
+			</div>
+			<!-- /.carousel -->
 			
 			<!-- .top_panel_title -->
 			<div class="top_panel_title top_panel_style_8  breadcrumbs_present scheme_original">
@@ -1029,6 +1253,224 @@
 							</section>
 							<!-- / -->
 
+							<!-- .spv1rem -->
+							<section class="bg_image_13 spv1rem">
+								<!-- -->
+								<div class="container">
+									<!-- -->
+									<div class="sc_section section_style_thick aligncenter margin_top_no margin_bottom_no bg_image_12">
+										<!-- -->
+										<div class="sc_section_inner">
+											<!-- -->
+											<div class="sc_section_overlay">
+												<!-- -->
+												<div class="sc_section_content padding_on">
+													<h1 class="sc_title margin_top_medium margin_bottom_null white">Happy Hours</h1>
+													<h3 class="sc_title sc_title_style_3 margin_top_tiny-">Daily at 5pm till 7pm</h3>
+												</div>
+												<!-- / -->
+											</div>
+											<!-- / -->
+										</div>
+										<!-- / -->
+									</div>
+									<!-- / -->
+								</div>
+								<!-- / -->
+							</section>
+							<!-- /.spv1rem -->
+
+							<!-- -->
+							<section class="spt72rem spb5rem">
+								<!-- -->
+								<div class="container">
+									<!-- -->
+									<div class="sc_team_wrap">
+										<!-- -->
+										<div class="sc_team sc_team_style_team-3">
+											<h5 class="sc_team_subtitle sc_item_subtitle">Meet The Team</h5>
+											<h1 class="sc_team_title sc_item_title">Bartenders</h1>
+											
+											<!-- -->
+											<div class="sc_columns columns_wrap">
+												<!-- -->
+												<div class="column-1_3 column_padding_bottom">
+													<!-- -->
+													<div class="sc_team_item sc_team_item_1 odd first">
+														<!-- -->
+														<div class="sc_team_item_avatar">
+															<img alt="Daniel Green" src="images/team2-740x856.jpg">
+															
+															<!-- -->
+															<div class="sc_team_item_hover">
+																<!-- -->
+																<div class="sc_team_item_socials">
+																	<!-- -->
+																	<div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_tiny">
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_facebook">
+																				<span class="icon-facebook"></span>
+																			</a>
+																		</div>
+																		
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_instagramm">
+																				<span class="icon-instagramm"></span>
+																			</a>
+																		</div>
+																		
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_gpl">
+																				<span class="icon-gpl"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																	</div>
+																	<!-- / -->
+																</div>
+																<!-- / -->
+															</div>
+															<!-- / -->
+														</div>
+														<!-- / -->
+														
+														<!-- -->
+														<div class="sc_team_item_info">
+															<h3 class="sc_team_item_title"><a href="#">Daniel Green</a></h3>
+															
+															<!-- -->
+															<div class="sc_team_item_position">Bartender</div>
+														</div>
+														<!-- / -->
+													</div>
+													<!-- / -->
+												</div><div class="column-1_3 column_padding_bottom">
+													<!-- -->
+													<div class="sc_team_item sc_team_item_2 even">
+														<!-- -->
+														<div class="sc_team_item_avatar">
+															<img alt="Tonny Wisper" src="images/team1-740x856.jpg">
+															
+															<!-- -->
+															<div class="sc_team_item_hover">
+																<!-- -->
+																<div class="sc_team_item_socials">
+																	<!-- -->
+																	<div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_tiny">
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_facebook">
+																				<span class="icon-facebook"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																		
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_instagramm">
+																				<span class="icon-instagramm"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																		
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_gpl">
+																				<span class="icon-gpl"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																	</div>
+																	<!-- / -->
+																</div>
+																<!-- / -->
+															</div>
+															<!-- / -->
+														</div>
+														<!-- / -->
+														
+														<!-- -->
+														<div class="sc_team_item_info">
+															<h3 class="sc_team_item_title"><a href="#">Tonny Wisper</a></h3>
+															
+															<!-- -->
+															<div class="sc_team_item_position">Bartender</div>
+														</div>
+														<!-- / -->
+													</div>
+													<!-- / -->
+												</div><div class="column-1_3 column_padding_bottom">
+													<!-- -->
+													<div class="sc_team_item sc_team_item_3 odd">
+														<!-- -->
+														<div class="sc_team_item_avatar">
+															<img alt="Valentino Lucci" src="images/team3-740x856.jpg">
+															
+															<!-- -->
+															<div class="sc_team_item_hover">
+																<!-- -->
+																<div class="sc_team_item_socials">
+																	<!-- -->
+																	<div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_tiny">
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_facebook">
+																				<span class="icon-facebook"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																		
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_instagramm">
+																				<span class="icon-instagramm"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																		
+																		<!-- -->
+																		<div class="sc_socials_item">
+																			<a href="#" target="_blank" class="social_icons social_gpl">
+																				<span class="icon-gpl"></span>
+																			</a>
+																		</div>
+																		<!-- / -->
+																	</div>
+																	<!-- / -->
+																</div>
+																<!-- / -->
+															</div>
+															<!-- / -->
+														</div>
+														<!-- / -->
+														
+														<!-- -->
+														<div class="sc_team_item_info">
+															<h3 class="sc_team_item_title"><a href="#">Valentino Lucci</a></h3>
+															
+															<!-- -->
+															<div class="sc_team_item_position">Bartender</div>
+															<!-- / -->
+														</div>
+														<!-- / -->
+													</div>
+													<!-- / -->
+												</div>
+												<!-- / -->
+											</div>
+											<!-- / -->
+										</div>
+										<!-- / -->
+									</div>
+									<!-- / -->
+								</div>
+								<!-- / -->
+							</section>
+							<!-- / -->
+
 							<!-- -->
 							<section class="bg_image_14">
 								<!-- -->
@@ -1339,6 +1781,39 @@
 								<!-- / -->
 							</section>
 							<!-- / -->
+
+							<!-- -->
+							<section class="bg_image_15 spt4rem spb365rem">
+								<!-- -->
+								<div class="container">
+									<!-- -->
+									<div class="sc_content content_wrap">
+										<!-- -->
+										<div class="sc_section aligncenter">
+											<!-- -->
+											<div class="sc_section_inner">
+												<h2 class="sc_title sc_title_style_4 margin_top_no margin_bottom_small white">stay in touch with updates</h2>
+												
+												<!-- -->
+												<div class="sc_emailer sc_emailer_opened">
+													<!-- -->
+													<form class="sc_emailer_form">
+														<input type="text" class="sc_emailer_input" name="email" value="" placeholder="Enter Your Email">
+														<a href="#" class="sc_emailer_button sc_button sc_button_style_filled style_color_light" title="Submit" data-group="Updates">Submit</a>
+													</form>
+													<!-- / -->
+												</div>
+												<!-- / -->
+											</div>
+											<!-- / -->
+										</div>
+										<!-- / -->
+									</div>
+									<!-- / -->
+								</div>
+								<!-- / -->
+							</section>
+							<!-- / -->
 						</div>
 						<!-- / -->
 					</article>
@@ -1346,6 +1821,53 @@
 				</div>
 				<!-- / -->
 			</div>
+			<!-- / -->
+			
+			<!-- -->
+			<footer class="footer_wrap widget_area scheme_original show-footer-border-no">
+				<!-- -->
+				<div class="footer_wrap_inner widget_area_inner">
+					<!-- -->
+					<div class="content_wrap">
+						<!-- -->
+						<div class="columns_wrap">
+							<!-- -->
+							<aside class="widget_number_1 column-1_3 widget widget_text">
+								<h2 class="widget_title">Email Address</h2>
+								
+								<!-- -->
+								<div class="textwidget">
+									<a href="info@yoursite.com">info@yoursite.com</a><br>
+									<a href="www.yoursite.com">www.yoursite.com</a>
+								</div>
+								<!-- / -->
+							</aside><aside class="widget_number_2 column-1_3 widget widget_text">
+								<h2 class="widget_title">Phones &#038; Faxes</h2>
+							
+								<!-- -->
+								<div class="textwidget">
+									+1(800)123-4567<br>
+									+1(800)123-4566
+								</div>
+								<!-- / -->
+							</aside><aside class="widget_number_3 column-1_3 widget widget_text">
+								<h2 class="widget_title">Bar&#8217;s Location</h2>
+								
+								<!-- -->
+								<div class="textwidget">
+									176 W Lorem Street<br>
+									New York, NY 10014
+								</div>
+								<!-- / -->
+							</aside>
+							<!-- / -->
+						</div>
+						<!-- / -->
+					</div>
+					<!-- / -->
+				</div>
+				<!-- / -->
+			</footer>
 			<!-- / -->
 			
 			<!-- -->
@@ -1374,7 +1896,7 @@
 					<div class="content_wrap">
 						<!-- -->
 						<div class="copyright_text">
-							Copyright &copy; Captain Barbozza 2020 All Rights Reserved | <a href="terms-of-use.html">Terms of Use</a> | <a href="privacy-policy.html">Privacy Policy</a>
+							<a href="http://ancorathemes.com/">Ancora</a> © 2015 All Rights Reserved <a href="http://ancorathemes.com/">Terms of Use</a> and <a href="http://ancorathemes.com/">Privacy Policy</a>
 						</div>
 						<!-- / -->
 						
@@ -1465,7 +1987,7 @@
 		// Bootstrap Carousel
 		easy_background(".main-fold", {
             slide: ["images/slide-1.jpg", "images/slide-2.jpg"],
-            delay: [5000, 5000]
+            delay: [2000, 2000]
         });
 	</script>
 </body>

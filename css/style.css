@@ -1,49 +1,17 @@
 @charset 'utf-8';
 /*
-Theme Name: OldStory HTML
-Theme URI: http://oldstory-html.ancorathemes.com/
-Description: OldStory - Multipurpose and Multiskin Responsive HTML theme
-Author: OldStory
-Author URI: http://ancorathemes.com/
+Theme Name: Captain Barbozza
+Theme URI: 
+Description: Captain Barbozza - Eat like a Captain, Drink like a Pirate
+Author: CaptainBarbozza
+Author URI: 
 Version: 1.0
 License: GNU General Public License
 License URI: license.txt
 Tags: light, responsive-layout, flexible-header, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
-Text Domain: oldstory
+Text Domain: captainbarbozza
 */
 
-
-/* TABLE OF CONTENTS:
-
-1. Reset tags
-2. Default tag's settings
-3. Form fields settings
-4. Styles and Screen readers
-5. Theme grid
-6. Page layouts
-7. Section's decorations
-   7.1 Header
-   7.2 Main Slider
-   7.3 Page top: page title and breadcrumbs
-   7.4 Main content wrapper
-   7.5 Post Formats
-   7.6 Post Layouts
-   7.7 Paginations
-8. Single page parts
-   8.1 Attachment and Portfolio post navigation
-   8.2 Reviews block
-   8.3 Post author
-   8.4 Comments
-   8.5 Page 404
-   8.8 Team member
-9. Sidebars
-10. Footer areas
-11. Utils
-12. Registration and Login popups
-13. Third part plugins
-14. Predefined classes for users
-
--------------------------------------------------------------- */
 
 /* 0. Font family
 -------------------------------------------------------------- */
@@ -6761,3 +6729,62 @@ ul[class*="woocommerce-"] li:before {
 .woocommerce-checkout #payment ul.payment_methods li img {
     margin-right: 1em;
 }
+
+/* General */
+h1, h2 { font-family: "Constantine"; }
+h1, h2, h4, h5, h6 { text-transform: capitalize; }
+
+.hidden { display: none; }
+
+a:hover { text-decoration: none !important; }
+
+header { transition: 0.3s all ease; top: 0; position: fixed !important; background-color: rgba(37, 37, 37, 0); }
+header .logo { margin-top: 10px !important; position: relative; max-width: 240px; }
+header .logo .icon,
+header .logo .text { transition: 0.3s all ease; }
+header .icon { max-height: 100%; }
+header .text { opacity: 0; position: absolute; top: 0; left: 0; transform: scale(0.0); }
+header .top_panel_middle { transition: 0.3s all ease; }
+
+.top_panel_style_8 .top_panel_middle .contact_info { padding-left: 0; margin-top: 40px; }
+.top_panel_style_8 .top_panel_middle .contact_info li { padding-left: 20px; margin-bottom: 5px; }
+.top_panel_style_8 .top_panel_middle .contact_address:before { left: 0; }
+
+header.onscroll { box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.4); overflow: hidden; }
+header.onscroll { background-color: rgba(37, 37, 37, 1); z-index: 20 !important; }
+header.onscroll .top_panel_middle { padding: 0 !important; }
+header.onscroll .logo { margin-top: 40px !important; }
+header.onscroll .icon { opacity: 0; transform: scale(0.0); }
+header.onscroll .text { opacity: 1; transform: scale(1.0); }
+
+/* Main Fold */
+.main-fold { color: #FFFFFF; }
+.main-fold h1 { text-transform: capitalize; color: #FFFFFF; font-size: 56px; margin-bottom: 0; padding-top: 200px; }
+.main-fold h5 { color: #FFFFFF; }
+.main-fold .row { height: 100vh; text-align: center; }
+.main-fold .row:before { content: ""; border: 7px solid #FFFFFF; height: calc(100% - 80px); width: calc(100% - 80px); }
+.main-fold .row:before { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+/* Banner */
+.banner { color: #FFFFFF; background-color: #000000; }
+.banner { background-size: cover; background-position: center; }
+.banner h1 { text-transform: capitalize; color: #FFFFFF; font-size: 56px; margin-bottom: 0; padding-top: 200px; }
+.banner .row { min-height: 500px; text-align: center; position: relative; }
+.banner .row:before { content: ""; border: 7px solid #FFFFFF; height: calc(100% - 80px); width: calc(100% - 80px); }
+.banner .row:before { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.banner .list-breadcrumbs { color: #FFFFFF; padding-bottom: 100px; }
+.banner .list-breadcrumbs li { font-size: 1.25rem; padding-left: 20px; }
+.banner .list-breadcrumbs li:first-child { padding-left: 0; }
+.banner .list-breadcrumbs li:first-child::before { display: none; }
+.banner .list-breadcrumbs li::before { margin-right: 30px; top: 10px; left: 0; }
+
+/* Preventives and Overwrites */
+.sc_services_style_services-3 .sc_services_item_title { padding: 1.85em 2em; }
+
+.section-menu h6,
+.sc_events_style_events-2 .sc_events_item_day,
+.sc_list_style_menu li h6,
+.sc_tabs .sc_tabs_titles li { font-family: "Constantine"; text-transform: capitalize; }
+
+.section-menu { padding-top: 100px; padding-bottom: 100px; }
+.section-menu .row-menu { border-bottom: 1px dashed #CCC; padding-bottom: 20px; margin-bottom: 20px; }

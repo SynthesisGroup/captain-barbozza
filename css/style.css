@@ -6781,10 +6781,17 @@ header.onscroll .text { opacity: 1; transform: scale(1.0); }
 /* Preventives and Overwrites */
 .sc_services_style_services-3 .sc_services_item_title { padding: 1.85em 2em; }
 
+/* Font Assignments */
+.content .minimal-light .esg-filterbutton,
 .section-menu h6,
 .sc_events_style_events-2 .sc_events_item_day,
 .sc_list_style_menu li h6,
 .sc_tabs .sc_tabs_titles li { font-family: "Constantine"; text-transform: capitalize; }
 
-.section-menu { padding-top: 100px; padding-bottom: 100px; }
+.section-menu { padding-bottom: 100px; }
 .section-menu .row-menu { border-bottom: 1px dashed #CCC; padding-bottom: 20px; margin-bottom: 20px; }
+
+.content { padding-top: 100px; padding-bottom: 0; }
+.sidebar { padding-top: 100px; }
+
+.mainul li:before { display: none; }

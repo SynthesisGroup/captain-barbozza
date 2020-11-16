@@ -29,7 +29,7 @@
 			<!-- /.top_panel_fixed_wrap -->
 			
 			<!-- header -->
-			<header class="top_panel_wrap top_panel_style_8 scheme_original">
+			<header class="top_panel_wrap top_panel_style_8 scheme_original for-screen">
 				<!-- .top_panel_wrap_inner -->
 				<div class="top_panel_wrap_inner top_panel_inner_style_8 top_panel_position_over">
 					<!-- .top_panel_middle -->
@@ -72,6 +72,30 @@
 			</header>
 			<!-- /header -->
 			
+			<!-- header -->
+			<header class="top_panel_wrap top_panel_style_8 scheme_original for-mobile">
+				<!-- .top_panel_wrap_inner -->
+				<div class="top_panel_wrap_inner top_panel_inner_style_8 top_panel_position_over">
+					<!-- .col-logo -->
+					<div class="col-logo">
+						<!-- .logo -->
+						<div class="logo">
+							<a href="index.html"><img src="images/text-captain-barbozza.png" class="text" alt="" /></a>
+						</div>
+						<!-- /.logo -->							
+					</div>
+					<!-- /.col-logo -->
+
+					<!-- ."col-menu -->
+					<div class="col-menu">
+						<a href="#" class="menu_pushy_button"><span class=" icon-menu"></span></a>
+					</div>
+					<!-- /."col-menu -->
+				</div>
+				<!-- /.top_panel_wrap_inner -->
+			</header>
+			<!-- /header -->
+			
 			<!-- .menu_pushy_nav_area -->
 			<nav class="menu_pushy_nav_area pushy pushy-left scheme_dark">
 				<!-- .pushy_inner -->
@@ -97,59 +121,6 @@
 			<div class="site-overlay"></div>
 			<!-- /.site-overlay -->
 			
-			<!-- .header_mobile -->
-			<div class="header_mobile">
-				<!-- .content_wrap -->
-				<div class="content_wrap">
-					<!-- .menu_button -->
-					<div class="menu_button icon-menu"></div>
-					<!-- /.menu_button -->
-					
-					<!-- .logo -->
-					<div class="logo">
-						<a href="index.html"><img src="images/text-captain-barbozza.png" class="text" alt="" /></a>
-					</div>
-					<!-- /.logo -->
-				</div>
-				<!-- /.content_wrap -->
-				
-				<!-- .side_wrap -->
-				<div class="side_wrap">
-					<!-- .close -->
-					<div class="close">Close</div>
-					<!-- /.close -->
-					
-					<!-- .panel_top -->
-					<div class="panel_top">
-						<!-- .menu_main_nav_area -->
-						<nav class="menu_main_nav_area">
-							<!-- .menu_main_nav -->
-							<ul id="menu_main" class="menu_main_nav">
-								<li class="menu-item"><a href="index.html">Home</a></li>
-								<li class="menu-item"><a href="about-us.html">About Us</a></li>
-								<li class="menu-item"><a href="our-menu.html">Our Menu</a></li>
-								<li class="menu-item"><a href="promo.html">Promo</a></li>
-								<li class="menu-item"><a href="latest-events.html">Latest Events</a></li>
-								<li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
-							</ul>
-							<!-- /.menu_main_nav -->
-						</nav>
-						<!-- /.menu_main_nav_area -->
-					</div>
-					<!-- /.panel_top -->
-					
-					<!-- .panel_bottom -->
-					<div class="panel_bottom"></div>
-					<!-- /.panel_bottom -->
-				</div>
-				<!-- /.side_wrap -->
-				
-				<!-- .mask -->
-				<div class="mask"></div>
-				<!-- /.mask -->
-			</div>
-			<!-- /.header_mobile -->
-			
 			<!-- -->
 			<div class="main-fold">
 				<!-- -->
@@ -158,6 +129,12 @@
 					<div class="row justify-content-center align-content-center">
 						<!-- -->
 						<div class="col-md-8">
+							<!-- .logo -->
+							<div class="logo for-mobile">
+								<a href="index.html"><img src="images/icon-captain-barbozza.png" class="icon" alt="" /></a>
+							</div>
+							<!-- /.logo -->
+							
 							<h1 class="heading">Captain Barbozza</h1>
 							<h5>Eat like a Captain, Drink like a Pirate</h5>
 							<a href="#" class="sc_button sc_button_style_filled margin_top_medium">Find Out More</a>
@@ -169,22 +146,6 @@
 				<!-- / -->
 			</div>
 			<!-- / -->
-			
-			<!-- .top_panel_title -->
-			<div class="top_panel_title top_panel_style_8  breadcrumbs_present scheme_original">
-				<!-- .top_panel_title_inner -->
-				<div class="top_panel_title_inner top_panel_inner_style_8  breadcrumbs_present_inner">
-					<!-- .content_wrap -->
-					<div class="content_wrap">
-						<!-- / -->
-						<div class="breadcrumbs"></div>
-						<!-- / -->
-					</div>
-					<!-- /.content_wrap -->
-				</div>
-				<!-- /.top_panel_title_inner -->
-			</div>
-			<!-- /.top_panel_title -->
 			
 			<!-- .page_content_wrap -->
 			<div class="page_content_wrap page_paddings_no">
@@ -1450,18 +1411,6 @@
 	<script src="js/custom/theme.shortcodes.js"></script>
 	<script src="js/bootstrap/bootstrap.js"></script>
 	<script>		
-		// Sticky Header
-		$(window).scroll(function(){
-			if ($(window).scrollTop() >= 200) {
-				$('header').addClass('onscroll');
-				//$('nav div').addClass('visible-title');
-			}
-			else {
-				$('header').removeClass('onscroll');
-				//$('nav div').removeClass('visible-title');
-			}
-		});
-		
 		// Bootstrap Carousel
 		easy_background(".main-fold", {
             slide: ["images/slide-1.jpg", "images/slide-2.jpg"],

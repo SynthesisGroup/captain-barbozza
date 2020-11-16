@@ -6757,18 +6757,31 @@ header.onscroll .logo { margin-top: 40px !important; }
 header.onscroll .icon { opacity: 0; transform: scale(0.0); }
 header.onscroll .text { opacity: 1; transform: scale(1.0); }
 
+header.for-mobile { background-color: rgba(37, 37, 37, 1); }
+header.for-mobile .text { opacity: 1; position: static; transform: scale(1.0); }
+header.for-mobile .top_panel_wrap_inner { padding: 0; display: flex; padding: 35px 25px; align-content: center; }
+header.for-mobile .col-logo { width: 80%; }
+header.for-mobile .col-logo .logo { margin: 0 !important; }
+header.for-mobile .col-menu { text-align: right; width: 20%; }
+header.for-mobile .col-menu .menu_pushy_button { padding: 0; margin: 0; display: block; }
+header.for-mobile .col-menu .menu_pushy_button .icon-menu { height: 50px; }
+
 /* Main Fold */
 .main-fold { color: #FFFFFF; }
-.main-fold h1 { text-transform: capitalize; color: #FFFFFF; font-size: 56px; margin-bottom: 0; padding-top: 200px; }
+.main-fold h1 { text-transform: capitalize; color: #FFFFFF; font-size: 56px; margin-bottom: 0; }
 .main-fold h5 { color: #FFFFFF; }
-.main-fold .row { height: 100vh; text-align: center; }
+.main-fold .row { height: 100vh; min-height: 320px; text-align: center; position: relative; padding: 100px 0; }
 .main-fold .row:before { content: ""; border: 7px solid #FFFFFF; height: calc(100% - 80px); width: calc(100% - 80px); }
 .main-fold .row:before { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.main-fold .logo { max-width: 160px; margin: 50px auto; }
+.main-fold .logo img { float: none; }
 
 /* Banner */
 .banner { color: #FFFFFF; background-color: #000000; }
 .banner { background-size: cover; background-position: center; }
-.banner h1 { text-transform: capitalize; color: #FFFFFF; font-size: 56px; margin-bottom: 0; padding-top: 200px; }
+.banner h1 { text-transform: capitalize; color: #FFFFFF; font-size: 56px; margin-bottom: 0; }
+.banner .logo { max-width: 160px; margin: 100px auto 0; }
+.banner .logo img { float: none; }
 .banner .row { min-height: 500px; text-align: center; position: relative; }
 .banner .row:before { content: ""; border: 7px solid #FFFFFF; height: calc(100% - 80px); width: calc(100% - 80px); }
 .banner .row:before { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }

@@ -14,6 +14,7 @@ Apple iPod Touch (5th generation)
 /* With side menu
 @media (min-width: 1510px) and (max-width: 1679px) {
 */
+
 /* Without side menu */
 @media (min-width: 1263px) and (max-width: 1439px) {
 
@@ -3587,4 +3588,26 @@ Very common low res
 
         overflow-y: scroll;
     }
+}
+
+/* 320  */
+@media (min-width: 320px) {	
+	.for-mobile { display: block !important; }
+	.for-screen { display: none !important; }
+	
+	.main-fold .row { height: auto; }
+	.banner h1 { font-size: 32px; }
+	
+	.row-menu .col-image { flex: 0 0 25%; max-width: 25%; }
+	.row-menu .col-details { flex: 0 0 58.333333%; max-width: 58.333333%; }
+	.row-menu .col-price { flex: 0 0 16.666667%; max-width: 16.666667%;}
+}
+
+/* 768 */
+@media (min-width: 768px) {	
+	.for-mobile { display: none !important; }
+	.for-screen { display: block !important; }
+	
+	.main-fold .row { height: 100vh; }
+	.banner h1 { font-size: 56px; padding-top: 100px; }
 }

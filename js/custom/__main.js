@@ -1034,3 +1034,16 @@ function woo_ship_calc() {
 		});
 	}
 }
+
+		
+// Sticky Header
+$(window).scroll(function(){
+	if ($(window).scrollTop() >= 200) {
+		$('header').addClass('onscroll');
+		//$('nav div').addClass('visible-title');
+	}
+	else {
+		$('header').removeClass('onscroll');
+		//$('nav div').removeClass('visible-title');
+	}
+});

@@ -1410,7 +1410,19 @@
 	<script src="js/custom/theme.init.min.js"></script>	
 	<script src="js/custom/theme.shortcodes.js"></script>
 	<script src="js/bootstrap/bootstrap.js"></script>
-	<script>		
+	<script>
+		// Sticky Header
+		$(window).scroll(function(){
+			if ($(window).scrollTop() >= 200) {
+				$('header').addClass('onscroll');
+				//$('nav div').addClass('visible-title');
+			}
+			else {
+				$('header').removeClass('onscroll');
+				//$('nav div').removeClass('visible-title');
+			}
+		});
+		
 		// Bootstrap Carousel
 		easy_background(".main-fold", {
             slide: ["images/slide-1.jpg", "images/slide-2.jpg"],
